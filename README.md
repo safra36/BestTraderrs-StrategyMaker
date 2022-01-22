@@ -7,4 +7,4 @@ This is intended to be used for Strategy Writer Documentation.
 - Add LOOPs to the language
 - Add position management customizations for scripts
 - Add config managements through scripting
-- Add more indicators (Stocastic etc)
+- Add more indicators (Stochastic etc)
