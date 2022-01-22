@@ -8,3 +8,5 @@ This is intended to be used for Strategy Writer Documentation.
 - Add position management customizations for scripts
 - Add config managements through scripting
 - Add more indicators (Stochastic etc)
+- Create dynamic alerts to be able to add dynamic data into alert text
+- Add channel strategies (not their code) for intraction and customizations
