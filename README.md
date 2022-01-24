@@ -1,5 +1,5 @@
 # BestTraderrs-StrategyMaker
-This is intended to be used for Strategy Writer Documentation.
+This is intended to be used for Strategy Writer Documentation. Please check WIKI for more information
 # TO-DO List
 - Add new strategies as code examples along with ready to use codes
 - Add TrendLine capability
