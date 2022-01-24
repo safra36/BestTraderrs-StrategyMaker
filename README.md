@@ -1,5 +1,8 @@
 # BestTraderrs-StrategyMaker
 This is intended to be used for Strategy Writer Documentation. Please check WIKI for more information
+
+# How does it work?
+You may check our Telegram channel at @BestTraderrs for free trading signals (A proof of our work) or @AmirRX_Trader for subscription of our TraderBot which uses our Telegram Channel Signals by default, eventhough you can define your own strategies using the bot which will create a new way to trade the market, and all the bot will do is scan the market for your strategy and then manage your position and risk when an entry is found.
 # TO-DO List
 - Add new strategies as code examples along with ready to use codes
 - Add TrendLine capability
