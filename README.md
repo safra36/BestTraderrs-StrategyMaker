@@ -14,3 +14,4 @@ This is intended to be used for Strategy Writer Documentation. Please check WIKI
 
 # Known Issues
 - Global data is not per asset but used for all assets which means using same variable name on a ALL strategy type will result in wrong calculations and signals
+- If you use strategy type ALL then translation script for strategy adding will take too long
