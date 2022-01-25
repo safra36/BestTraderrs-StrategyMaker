@@ -32,8 +32,7 @@
 #CALC lastClosedCandle.close SUBTRACT 4thTargetAddtion TO TP4
 
 #ORDER MacdStraShort SHORT ENTRY lastClosedCandle.close TP TP1 TP2 TP3 TP4 SL StopLoss
-#DEFINE isTradeDone 1
-#IF isTradeDone EQUAL 1 THEN BREAK
+BREAK
 
 ::LongSetup
 #IF lastMacd.MACD BELOW 0.0 THEN ADDTO conditions
@@ -53,5 +52,4 @@
 #CALC lastClosedCandle.close SUM 4thTargetAddtion TO TP4
 
 #ORDER MacdStraShort LONG ENTRY lastClosedCandle.close TP TP1 TP2 TP3 TP4 SL StopLoss
-#DEFINE isTradeDone 1
-#IF isTradeDone EQUAL 1 THEN BREAK
+BREAK
