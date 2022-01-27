@@ -1,13 +1,13 @@
-#STRATEGY MACDEMAStrategy 1H NO EXECUTE ALL
+#STRATEGY MACDEMAStrategy 1H YES EXECUTE ALL
 #CONFIG endOnExecution 0
 #DEFINE isFirstRun 0
 #DEFINE lastMacd lastMACDObject GLOBAL
 #IF lastMacd IS_UNDEFINED THEN SET isFirstRun TO 1
 #GET MACD(12,26,9) TO MacdObject
-#IF lastMacd IS_UNDEFINED THEN SET_GLOBAL lastMACDObject TO MacdObject
+#IF lastMacd IS_UNDEFINED THEN SET_GLOBAL lastMACDObject TO MacdObject VARIABLE
 #IF isFirstRun EQUAL 1 THEN BREAK
 
-#GLOBAL lastMACDObject MacdObject
+#GLOBAL lastMACDObject MacdObject VARIABLE
 #DEFINE conditions 0 NUMBER
 #GET EMA(200) TO TrendEMA
 #GET CANDLE(0) TO lastClosedCandle
@@ -19,6 +19,7 @@
 #IF lastMacd.signal ABOVE 0.0 THEN ADDTO conditions
 #IF lastMacd.historgram ABOVE 0.0 THEN ADDTO conditions
 #IF MacdObject.historgram BELOW 0.0 THEN ADDTO conditions
+#IF conditions BELOW 4 THEN BREAK
 
 #CALC TrendEMA SUBTRACT lastClosedCandle.close TO StopLoss
 #CALC StopLoss DEVIDE 4 TO 1stTargetAddition
@@ -39,6 +40,7 @@ BREAK
 #IF lastMacd.signal BELOW 0.0 THEN ADDTO conditions
 #IF lastMacd.historgram BELOW 0.0 THEN ADDTO conditions
 #IF MacdObject.historgram ABOVE 0.0 THEN ADDTO conditions
+#IF conditions BELOW 4 THEN BREAK
 
 #CALC lastClosedCandle.close SUBTRACT TrendEMA TO StopLoss
 #CALC StopLoss DEVIDE 4 TO 1stTargetAddition
